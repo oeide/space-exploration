@@ -1,0 +1,128 @@
+\documentclass[12pt]{book}
+\usepackage[british]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{natbib}
+\usepackage{enumitem}
+\usepackage{fancyvrb}
+\usepackage{color}
+\usepackage{makeidx}
+\usepackage{setspace}
+\usepackage{authorindex}
+\usepackage[stable]{footmisc}
+\usepackage{minibox}
+\usepackage{amsmath}
+\usepackage{fmtcount}
+\usepackage{soul}
+\usepackage{listings}
+
+\setlength{\textwidth}{12cm}
+\setlength{\oddsidemargin}{2cm} 
+\setlength{\evensidemargin}{2cm}
+\setlength{\textheight}{21cm}
+\setcounter{secnumdepth}{0}
+
+\hyphenation{meta-phor-ised}
+    
+\begin{document}
+
+\title{Unknown space project. Lab notes}
+
+\author{Øyvind Eide}
+
+\date{\today}
+
+%\maketitle
+
+%\tableofcontents
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{3mm}
+\let\stdsection\section
+%\renewcommand\section{\newpage\stdsection}  
+
+\chapter{Beyond Zeiger}
+
+\section{2024-01-21}
+
+\begin{itemize}
+\item Creating test 1: Double Between
+
+\item Finding places through Norgeskart
+
+\item Wenn Schnittfläcke ist leer: error
+
+\item Modfified the width of between objects in pizzacut.py::Between
+
+\end{itemize}
+
+\subsection{Idea}
+
+\begin{enumerate}
+\item Find a movement passage in Schnitler
+\item Enter all relational information, implicit and explicit
+\item Add geolocation of all known places
+\item If all places are known:
+\begin{enumerate}
+\item Run as many experiments as there are places
+\item In each, one place is made unknown
+\item Look a consequences of systematic choices as to if the place falls within the area predicted
+\item What is the smallest possible area of prediction?
+\end{enumerate}
+
+\end{enumerate}
+
+https://github.com/jjimenezshaw/Leaflet.UTM
+
+\section{2024-01-24}
+
+Can also use R for conversion: https://rdrr.io/cran/oce/
+
+\subsection{Research plan}
+
+\begin{enumerate}
+\item Create a place record for each place name in SchnitlerTable.html.
+\item Establish coordinates for each place using a methodology.\footnote{In this case, modern map studies based on the gazetteer in Schnitler}
+\item Set parameter values for distance, span and direction based on distance in mile and contextual direction information.
+\item For each place:
+\begin{enumerate}
+\item Generate rooms of possibilities from the place before and after.
+\item See if the place falls within based on the parameter values used. 
+\end{enumerate}
+\end{enumerate}
+
+\section{2024-01-25}
+
+Introduce an outer iterative layer directly in the python scripts?
+
+\section{2024-01-26}
+
+Write a python script implementing the structure of the research plan
+
+\section{2024-02-01}
+
+Zeiger is using mathematical coordinates, not geographical.
+
+\section{2024-03-25}
+
+Modified main.py, pizzacut.py and draw.py so that a map is drawn also when there is no overlap. 
+
+Steps:
+
+\begin{lstlisting}
+Space> python scripts/reearchPlan.py
+Please input filepath (../file.csv): Documents/testSchnitler.csv
+UnknownPlaces-master> python main.py
+\end{lstlisting}
+
+There is something weird with the distances.
+
+And: the road does not in reality go eastwards.
+
+\bibliographystyle{chicago}
+\addcontentsline{toc}{section}{References}
+\bibliography{/Users/oeide_loc/Documents/skriving/references/refsOE}
+\end{document}

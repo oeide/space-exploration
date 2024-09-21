@@ -64,7 +64,7 @@ def get_input():
 def get_input_filename(filepath: str):
     print("Enter get_input_filename with "+filepath)
     #csv_reader(input("Please input filepath (../file.csv): "))
-    csv_reader(input(filepath))
+    csv_reader(filepath)
     for z in input_dict:
         if isinstance(input_dict[z], tuple):
             if len(input_dict[z]) == 3:

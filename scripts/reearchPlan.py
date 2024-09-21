@@ -40,13 +40,10 @@ def csv_reader(filepath: str):
             fileOut.write("cs,coordinates,type,verweis\n")
             fileOut.write("utm," + row_list[iBefore]["Xord"] + " " + row_list[iBefore]["Yord"] + " " +
                   row_list[iBefore]["Zone"] + " S,direction," + str(int(row_list[i]["Distance"]) * distMiil) + 
-                  " " + str(westMiddle-(span/2)) + " " + str(westMiddle+(span/2))+"\n")
-                  
-            print(str(westMiddle-(span/2)))
-            print(str(westMiddle+(span/2)))
+                  " " + str(int(westMiddle-(span/2))) + " " + str(int(westMiddle+(span/2)))+"\n")
             fileOut.write("utm," + row_list[iAfter]["Xord"] + " " + row_list[iAfter]["Yord"] + " " +
                   row_list[iAfter]["Zone"] + " S,direction," + str(int(row_list[i]["Distance"]) * distMiil) +
-                  " " + east1 + " " + east2+"\n")
+                  " " + str(int(eastMiddle-(span/2))) + " " + str(int(eastMiddle+(span/2)))+"\n")
             i= i+1
             fileOut.write("\n")
             fileOut.close()
@@ -54,7 +51,7 @@ def csv_reader(filepath: str):
             generate_map_from_file(filename)
             
 # Parameters, later to be modified in experiments
-distMiil= 12
+distMiil= 11.3
 west1= "130"
 west2= "230"
 westMiddle= 180

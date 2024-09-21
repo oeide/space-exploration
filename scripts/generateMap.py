@@ -62,7 +62,9 @@ def get_input():
             shapeList.append(pizzacut.Distance(input_dict[z]))
 
 def get_input_filename(filepath: str):
-    csv_reader(input("Please input filepath (../file.csv): "))
+    print("Enter get_input_filename with "+filepath)
+    #csv_reader(input("Please input filepath (../file.csv): "))
+    csv_reader(input(filepath))
     for z in input_dict:
         if isinstance(input_dict[z], tuple):
             if len(input_dict[z]) == 3:
@@ -122,6 +124,7 @@ def csv_reader(filepath: str):
     Extracts Place-Objects from csv-file
     :param filepath: filepath to csv-file
     """
+    print("Enter csv_reader with "+filepath)
     with open(filepath) as file:
         csvreader = csv.DictReader(file)
         read_list = list()
@@ -196,6 +199,7 @@ def check_intersection(subj, clip):
     return scale_from_clipper(pc.Execute(pyclipper.CT_INTERSECTION, pyclipper.PFT_POSITIVE, pyclipper.PFT_POSITIVE))
     
 def generate_map_from_file(filepath: str):
+    print("Enter generate_map_from_file with "+filepath)
     get_input_filename(filepath)
     schnittflache = check_intersection(shapeList[-1].path, shapeList[0].path)
     i = 1

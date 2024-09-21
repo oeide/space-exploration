@@ -1,7 +1,8 @@
 import csv
 import numpy
 import os
-import generateMap
+#import generateMap
+from generateMap import generate_map_from_file
 
 user_abort = False
 
@@ -39,9 +40,12 @@ def csv_reader(filepath: str):
             fileOut.write("cs,coordinates,type,verweis\n")
             fileOut.write("utm," + row_list[iBefore]["Xord"] + " " + row_list[iBefore]["Yord"] + " " +
                   row_list[iBefore]["Zone"] + " S,direction," + str(int(row_list[i]["Distance"]) * distMiil) + 
-                  " " + west1 + " " + west2+"\n")
+                  " " + str(westMiddle-(span/2)) + " " + str(westMiddle+(span/2))+"\n")
+                  
+            print(str(westMiddle-(span/2)))
+            print(str(westMiddle+(span/2)))
             fileOut.write("utm," + row_list[iAfter]["Xord"] + " " + row_list[iAfter]["Yord"] + " " +
-                  row_list[iAfter]["Zone"] + " S,direction," + str(int(row_list[i]["Distance"]) * distMiil) + 
+                  row_list[iAfter]["Zone"] + " S,direction," + str(int(row_list[i]["Distance"]) * distMiil) +
                   " " + east1 + " " + east2+"\n")
             i= i+1
             fileOut.write("\n")
@@ -53,10 +57,13 @@ def csv_reader(filepath: str):
 distMiil= 12
 west1= "130"
 west2= "230"
+westMiddle= 180
 east1= "310"
 east2= "410"
+eastMiddle= 360
+span= 20
 
-root= "/Users/oeide/sciebo/koln/forskning/Space/"
+root= "/Users/oeide/Documents/GitHub/space-exploration/"
 
 #while not user_abort:
 csv_reader(root+"SchnitlerBasis.csv")

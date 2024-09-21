@@ -203,6 +203,7 @@ def generate_map_from_file(filepath: str):
     get_input_filename(filepath)
     schnittflache = check_intersection(shapeList[-1].path, shapeList[0].path)
     i = 1
+    color="#ff0000"
     if len(schnittflache) > 0:
         while i < len(shapeList):
             schnittflache = check_intersection(shapeList[i].path, tuple(tuple(sub) for sub in schnittflache[0]))
@@ -213,11 +214,11 @@ def generate_map_from_file(filepath: str):
         else:
             zone_get = input_dict[0]
         draw.draw(shapeList, pizzacut.latlon_conv(tuple(tuple(sub) for sub in schnittflache[0]), zone_get.utm["zone_numb"],
-                                              zone_get.utm["zone_let"]))
+                                              zone_get.utm["zone_let"]), color)
     else:
         print("\nNo overlap! Length schnittflache: " + str(len(schnittflache)) + "\n")
-        draw.drawNoOverlap(shapeList)
-    choice = False
+        draw.drawNoOverlap(shapeList, color)
+    choice = True
     while not choice:
         restart = input("Add (n)ew Points, (s)ave input to CSV, (p)rint Clipped polygon to file or (a)bort?")
         if restart == "a":

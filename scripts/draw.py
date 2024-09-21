@@ -1,3 +1,4 @@
+#from foliumLocal import *
 import folium
 from xyzservices import TileProvider
 
@@ -8,13 +9,13 @@ tileprovider = TileProvider(
                 "IGP, UPR-EGP, and the GIS User Community", )
 
 
-def draw(shapelist, schnittflaeche):
+def draw(shapelist, schnittflaeche, colorIn):
     """
     Draws polygon on map (leaflet), shows result in browser
     :param shapelist: List of Polygons to be drawn in WGS84 Decimal
     :param schnittflaeche: Polygon of intersection area
     """
-    my_map = folium.Map(location=shapelist[0].shape[0], zoom_start=10, tiles=None)
+    my_map = folium.Map(location=shapelist[0].shape[0], zoom_start=8, tiles=None)
     folium.TileLayer("OpenStreetMap").add_to(my_map)
     folium.TileLayer(tileprovider, show=False, name="Esri Worldimagery").add_to(my_map)
     folium.LayerControl().add_to(my_map)
@@ -31,17 +32,21 @@ def draw(shapelist, schnittflaeche):
         fill_opacity=0.15,
         fill=True,
     ).add_to(my_map)
+    print("Before show my map")
     my_map.show_in_browser()
+    print("After show my map")
+"""
     save = input("Do you want to save your Result? (y)es/(n)o: ")
     if "y" in save.lower():
         my_map.save("result.html")
+"""
 
-def drawNoOverlap(shapelist):
+def drawNoOverlap(shapelist, colorIn):
     """
     Draws polygon on map (leaflet), shows result in browser
     :param shapelist: List of Polygons to be drawn in WGS84 Decimal
     """
-    my_map = folium.Map(location=shapelist[0].shape[0], zoom_start=10, tiles=None)
+    my_map = folium.Map(location=shapelist[0].shape[0], zoom_start=8, tiles=None)
     folium.TileLayer("OpenStreetMap").add_to(my_map)
     folium.TileLayer(tileprovider, show=False, name="Esri Worldimagery").add_to(my_map)
     folium.LayerControl().add_to(my_map)
@@ -52,8 +57,11 @@ def drawNoOverlap(shapelist):
             fill_opacity=0.15,
             fill=True,
         ).add_to(my_map)
+    print("Before show my map")
     my_map.show_in_browser()
+    print("After show my map")
+"""
     save = input("Do you want to save your Result? (y)es/(n)o: ")
     if "y" in save.lower():
         my_map.save("result.html")
-
+"""

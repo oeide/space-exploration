@@ -153,17 +153,17 @@ Everything is run from:
 
 \paragraph{Call order:}
 
-
+\begin{enumerate}
+\item generateExampleMaps.pl
 \begin{enumerate}
 \item researchPlan.py
 \end{enumerate}
-
 \begin{enumerate}
-\item generateExampleMaps.pl
 \item callMapGeneration.py
 \item generate\_map\_from\_file
 \item draw / drawNoOverlap
 \item show\_in\_browser (modified library file, see diff)
+\end{enumerate}
 \end{enumerate}
 
 Parameters are in: researchPlan.py, where the csv file is generated.

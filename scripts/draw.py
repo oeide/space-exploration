@@ -71,6 +71,18 @@ def drawNoOverlap(shapelist, colorIn):
             fill=True,
             color=color
         ).add_to(my_map)
+    folium.CircleMarker(
+        location=[50, 50],
+        radius=100,
+        color="cornflowerblue",
+        stroke=True,
+        fill=True,
+        fill_opacity=0.6,
+        opacity=1,
+        popup="{} pixels".format(100),
+        tooltip="I am in pixels"
+    ).add_to(my_map)
+
     #print("Before show my map")
     map_path= my_map.show_in_browser()
     del my_map
@@ -81,3 +93,5 @@ def drawNoOverlap(shapelist, colorIn):
     if "y" in save.lower():
         my_map.save("result.html")
 """
+
+

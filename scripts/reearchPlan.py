@@ -34,9 +34,13 @@ def csv_reader(filepath: str):
             else:
                 color="#"+str(i)+"0000"
             filename= root+"output/coord"+str(i)+".csv"
+            filenamePoint= root+"output/coord"+str(i)+".txt"
             if os.path.exists(filename):
                 os.remove(filename)
+            if os.path.exists(filenamePoint):
+                os.remove(filenamePoint)
             fileOut = open(filename, "x")
+            fileOutPoint = open(filenamePoint, "x")
             iBefore= i-1
             iAfter= i+1
             print(row_list[i]["Place"] + " is being handled...")
@@ -46,11 +50,14 @@ def csv_reader(filepath: str):
                   row_list[iBefore]["Zone"] + " S,direction," + str(int(row_list[i]["Distance"]) * distMiil) + 
                   " " + str(int(westMiddle-(span/2))) + " " + str(int(westMiddle+(span/2)))+"\n")
             fileOut.write("utm," + row_list[iAfter]["Xord"] + " " + row_list[iAfter]["Yord"] + " " +
-                  row_list[iAfter]["Zone"] + " S,direction," + str(int(row_list[i+1]["Distance"]) * distMiil) +
+                  row_list[iAfter]["Zone"] + " S,direction," + str(int(row_list[iAfter]["Distance"]) * distMiil) +
                   " " + str(int(eastMiddle-(span/2))) + " " + str(int(eastMiddle+(span/2)))+"\n")
+            fileOutPoint.write(row_list[i]["Xord"] + " " + row_list[i]["Yord"])
             i= i+1
             fileOut.write("\n")
             fileOut.close()
+            fileOutPoint.write("\n")
+            fileOutPoint.close()
             #print("Calling map generation for " + filename + " with color "+color+"\n")
             #generate_map_from_file(filename, color)
             

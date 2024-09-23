@@ -199,7 +199,7 @@ def check_intersection(subj, clip):
     return scale_from_clipper(pc.Execute(pyclipper.CT_INTERSECTION, pyclipper.PFT_POSITIVE, pyclipper.PFT_POSITIVE))
     
 def generate_map_from_file(filepath: str, color: str):
-    #print("Enter generate_map_from_file with "+filepath)
+    print("Enter generate_map_from_file with "+filepath)
     get_input_filename(filepath)
     schnittflache = check_intersection(shapeList[-1].path, shapeList[0].path)
     i = 1
@@ -220,4 +220,14 @@ def generate_map_from_file(filepath: str, color: str):
         print("\nNo overlap! Length schnittflache: " + str(len(schnittflache)) + "\n")
         map_path= draw.drawNoOverlap(shapeList, color)
     #print("map_path in generate_map_from_file: "+map_path)
+    
+    #Add the assumed loation of the place as a point
+    """
+    pointFileName= filepath[0:len(filepath)-3]+"txt"
+    print("pointFileName: "+pointFileName)
+    pointFile= open(pointFileName, 'r')
+    pointLine= pointFile.readline()
+    print("Point: "+pointLine)
+    map_path= draw.addPointToShapelist(pointLine)
+    """
     return map_path

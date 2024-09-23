@@ -1,13 +1,23 @@
-oeide@MacBook-Pro-8 folium % pwd
+oeide@vintereple2 folium % pwd
 /Users/oeide/Library/Python/3.10/lib/python/site-packages/folium
-oeide@MacBook-Pro-8 folium % diff folium.py_old folium.py
-404,405c404,405
+oeide@vintereple2 folium % diff folium.py_old folium.py
+5a6
+> import os
+402,406c403,409
+<             webbrowser.open("file://" + fname)
+<             print(
 <                 "Your map should have been opened in your browser automatically."
 <                 "\nPress ctrl+c to return."
+<             )
 ---
->                 "Your map should have been opened in your browser automatically: "+fname
+>             cmd= "cp "+fname+" /private/tmp/map.html"
+>             returned_value = os.system(cmd)
+>             #webbrowser.open("file://" + fname)
+>             #print(
+>                 #"Your map should have been opened in your browser automatically: "+fname+" Return: "+str(returned_value)
 >                 #"\nPress ctrl+c to return."
-408,412c408,412
+>             #)
+408,412c411,416
 <             try:
 <                 while True:
 <                     time.sleep(100)
@@ -15,8 +25,9 @@ oeide@MacBook-Pro-8 folium % diff folium.py_old folium.py
 <                 pass
 ---
 >             #try:
->                 #while True:
+>             #while True:
 >             time.sleep(1)
 >             #except KeyboardInterrupt:
 >                 #pass
-oeide@MacBook-Pro-8 folium % 
+>             return fname
+oeide@vintereple2 folium % 

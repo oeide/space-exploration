@@ -198,12 +198,11 @@ def check_intersection(subj, clip):
     pc.AddPath(scale_to_clipper(subj), pyclipper.PT_SUBJECT, True)
     return scale_from_clipper(pc.Execute(pyclipper.CT_INTERSECTION, pyclipper.PFT_POSITIVE, pyclipper.PFT_POSITIVE))
     
-def generate_map_from_file(filepath: str):
+def generate_map_from_file(filepath: str, color: str):
     print("Enter generate_map_from_file with "+filepath)
     get_input_filename(filepath)
     schnittflache = check_intersection(shapeList[-1].path, shapeList[0].path)
     i = 1
-    color="#ff0000"
     if len(schnittflache) > 0:
         while i < len(shapeList):
             schnittflache = check_intersection(shapeList[i].path, tuple(tuple(sub) for sub in schnittflache[0]))

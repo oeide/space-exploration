@@ -29,6 +29,10 @@ def csv_reader(filepath: str):
         #print(row_list[3]["Xord"])
         i= 1
         while i < len(row_list)-1:
+            if i<10:
+                color="#"+str(i)+str(i)+"0000"
+            else:
+                color="#"+str(i)+"0000"
             filename= root+"output/coord"+str(i)+".csv"
             if os.path.exists(filename):
                 os.remove(filename)
@@ -42,13 +46,13 @@ def csv_reader(filepath: str):
                   row_list[iBefore]["Zone"] + " S,direction," + str(int(row_list[i]["Distance"]) * distMiil) + 
                   " " + str(int(westMiddle-(span/2))) + " " + str(int(westMiddle+(span/2)))+"\n")
             fileOut.write("utm," + row_list[iAfter]["Xord"] + " " + row_list[iAfter]["Yord"] + " " +
-                  row_list[iAfter]["Zone"] + " S,direction," + str(int(row_list[i]["Distance"]) * distMiil) +
+                  row_list[iAfter]["Zone"] + " S,direction," + str(int(row_list[i+1]["Distance"]) * distMiil) +
                   " " + str(int(eastMiddle-(span/2))) + " " + str(int(eastMiddle+(span/2)))+"\n")
             i= i+1
             fileOut.write("\n")
             fileOut.close()
-            print("Calling map generation for " + filename + "\n")
-            generate_map_from_file(filename)
+            print("Calling map generation for " + filename + " with color "+color+"\n")
+            generate_map_from_file(filename, color)
             
 # Parameters, later to be modified in experiments
 distMiil= 11.3

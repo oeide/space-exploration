@@ -62,7 +62,7 @@ def get_input():
             shapeList.append(pizzacut.Distance(input_dict[z]))
 
 def get_input_filename(filepath: str):
-    print("Enter get_input_filename with "+filepath)
+    #print("Enter get_input_filename with "+filepath)
     #csv_reader(input("Please input filepath (../file.csv): "))
     csv_reader(filepath)
     for z in input_dict:
@@ -124,13 +124,13 @@ def csv_reader(filepath: str):
     Extracts Place-Objects from csv-file
     :param filepath: filepath to csv-file
     """
-    print("Enter csv_reader with "+filepath)
+    #print("Enter csv_reader with "+filepath)
     with open(filepath) as file:
         csvreader = csv.DictReader(file)
         read_list = list()
         for row in csvreader:
             read_list.append(pizzacut.Place(cs=row["cs"], coordinate_input=floating(row["coordinates"].split()),typ=row["type"], verweis=row["verweis"]))
-            print(dict(row))
+            #print(dict(row))
         j = 0
         k = len(input_dict)
         while j < len(read_list):
@@ -166,7 +166,7 @@ def csv_writer(filepath: str):
             else:
                 coordinates = str(input_dict[l].utm["easting"]) + " " + str(input_dict[l].utm["northing"]) \
                               + " " + str(input_dict[l].utm["zone_numb"]) + " " + str(input_dict[l].utm["zone_let"])
-                print(input_dict[l].verweis)
+                #print(input_dict[l].verweis)
                 if isinstance(input_dict[l].verweis[1], tuple):
                     verweis = str(input_dict[l].verweis[0]) + " " \
                               + str(input_dict[l].verweis[1][0]) + " " + str(input_dict[l].verweis[1][1])
@@ -205,10 +205,11 @@ def generate_map_from_file(filepath: str, color: str):
     i = 1
     map_path= ""
     if len(schnittflache) > 0:
+        print("\nOverlap! Length schnittflache: " + str(len(schnittflache)) + "\n")
         while i < len(shapeList):
             schnittflache = check_intersection(shapeList[i].path, tuple(tuple(sub) for sub in schnittflache[0]))
             i += 1
-        print("The clipped Polygon is modelled by: \n", schnittflache[0])
+        #print("The clipped Polygon is modelled by: \n", schnittflache[0])
         if isinstance(input_dict[0], tuple):
             zone_get = input_dict[0][0]
         else:

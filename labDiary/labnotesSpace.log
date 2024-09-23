@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.6.30)  23 SEP 2024 07:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.6.30)  23 SEP 2024 12:07
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **labnotesSpace.tex
@@ -381,8 +381,9 @@ Overfull \hbox (111.40608pt too wide) in paragraph at lines 141--142
 ages/folium/folium.py 
  []
 
+[3]
 No file labnotesSpace.bbl.
-[3] (./labnotesSpace.aux) ) 
+[4] (./labnotesSpace.aux) ) 
 Here is how much of TeX's memory you used:
  6809 strings out of 480608
  94410 string characters out of 5903630
@@ -402,10 +403,10 @@ er/sfrm0700.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super
 frm1000.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfr
 m1200.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfsl1
 200.pfb>
-Output written on labnotesSpace.pdf (3 pages, 93569 bytes).
+Output written on labnotesSpace.pdf (4 pages, 93960 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 53 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

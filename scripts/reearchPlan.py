@@ -51,8 +51,8 @@ def csv_reader(filepath: str):
             i= i+1
             fileOut.write("\n")
             fileOut.close()
-            print("Calling map generation for " + filename + " with color "+color+"\n")
-            generate_map_from_file(filename, color)
+            #print("Calling map generation for " + filename + " with color "+color+"\n")
+            #generate_map_from_file(filename, color)
             
 # Parameters, later to be modified in experiments
 distMiil= 11.3

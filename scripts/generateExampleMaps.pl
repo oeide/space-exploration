@@ -1,4 +1,11 @@
 #!/usr/bin/perl
+$komm0= "python ./reearchPlan.py";
+print "\n";
+print "\n";
+print $komm0;
+print "\n";
+system("$komm0");
+
 if ($#ARGV != 0)
 {
     print "Use: generateExampleMaps.pl <rootFolder>\n";

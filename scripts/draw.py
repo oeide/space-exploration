@@ -42,14 +42,10 @@ def draw(shapelist, schnittflaeche, colorIn):
         fill=True,
     ).add_to(my_map)
     print("Before show my map")
-    my_map.show_in_browser()
+    map_path= my_map.show_in_browser()
     del my_map
-    print("After show my map")
-"""
-    save = input("Do you want to save your Result? (y)es/(n)o: ")
-    if "y" in save.lower():
-        my_map.save("result.html")
-"""
+    print("After show my map: "+map_path)
+    return map_path
 
 def drawNoOverlap(shapelist, colorIn):
     """
@@ -76,9 +72,10 @@ def drawNoOverlap(shapelist, colorIn):
             color=color
         ).add_to(my_map)
     print("Before show my map")
-    my_map.show_in_browser()
+    map_path= my_map.show_in_browser()
     del my_map
-    print("After show my map")
+    print("After show my map"+map_path)
+    return map_path
 """
     save = input("Do you want to save your Result? (y)es/(n)o: ")
     if "y" in save.lower():

@@ -55,14 +55,15 @@ def csv_reader(filepath: str):
             #generate_map_from_file(filename, color)
             
 # Parameters, later to be modified in experiments
-distMiil= 11.3
 west1= "130"
 west2= "230"
 westMiddle= 180
 east1= "310"
 east2= "410"
 eastMiddle= 360
-span= 90
+
+span= 45
+distMiil= 11.3
 
 root= "/Users/oeide/Documents/GitHub/space-exploration/"
 

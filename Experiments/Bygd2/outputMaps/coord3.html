@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_8f5935317b7845b4fecedae5ba8782e8 {
+                #map_27bb873ec1d99d9eeac3f9e20be2a578 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_8f5935317b7845b4fecedae5ba8782e8" ></div>
+            <div class="folium-map" id="map_27bb873ec1d99d9eeac3f9e20be2a578" ></div>
         
 </body>
 <script>
     
     
-            var map_8f5935317b7845b4fecedae5ba8782e8 = L.map(
-                "map_8f5935317b7845b4fecedae5ba8782e8",
+            var map_27bb873ec1d99d9eeac3f9e20be2a578 = L.map(
+                "map_27bb873ec1d99d9eeac3f9e20be2a578",
                 {
                     center: [62.57426090666525, 11.383372953354604],
                     crs: L.CRS.EPSG3857,
@@ -60,47 +60,77 @@
 
         
     
-            var tile_layer_829bb79e3c1be60256b175bdbc0b6be7 = L.tileLayer(
+            var tile_layer_0afcecfc166cd6dc2dafb741bdd6e195 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_829bb79e3c1be60256b175bdbc0b6be7.addTo(map_8f5935317b7845b4fecedae5ba8782e8);
+            tile_layer_0afcecfc166cd6dc2dafb741bdd6e195.addTo(map_27bb873ec1d99d9eeac3f9e20be2a578);
         
     
-            var tile_layer_d52872115de39b6cb53f3b7332c31809 = L.tileLayer(
+            var tile_layer_3a59693153a6939526e3e6056d1b2c17 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            var layer_control_8de26b7d559aad642424bef11f4858fb_layers = {
+            var layer_control_4f554d23121b3370edf34c2dec8f9db3_layers = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_829bb79e3c1be60256b175bdbc0b6be7,
-                    "Esri Worldimagery" : tile_layer_d52872115de39b6cb53f3b7332c31809,
+                    "openstreetmap" : tile_layer_0afcecfc166cd6dc2dafb741bdd6e195,
+                    "Esri Worldimagery" : tile_layer_3a59693153a6939526e3e6056d1b2c17,
                 },
                 overlays :  {
                 },
             };
-            let layer_control_8de26b7d559aad642424bef11f4858fb = L.control.layers(
-                layer_control_8de26b7d559aad642424bef11f4858fb_layers.base_layers,
-                layer_control_8de26b7d559aad642424bef11f4858fb_layers.overlays,
+            let layer_control_4f554d23121b3370edf34c2dec8f9db3 = L.control.layers(
+                layer_control_4f554d23121b3370edf34c2dec8f9db3_layers.base_layers,
+                layer_control_4f554d23121b3370edf34c2dec8f9db3_layers.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_8f5935317b7845b4fecedae5ba8782e8);
+            ).addTo(map_27bb873ec1d99d9eeac3f9e20be2a578);
 
         
     
-            var polygon_0ca47776c2256cd6ec1a29ef73bb858c = L.polygon(
-                [[62.57426090666525, 11.383372953354604], [62.646466297924384, 10.943060332124226], [62.628495111858236, 10.93120838539603], [62.61011131204012, 10.922822031309783], [62.59146937391268, 10.91793247907601], [62.57269722366415, 10.916593664436723], [62.55393929327787, 10.918818014687053], [62.53534699809135, 10.924558590020032], [62.5170541542856, 10.933790608531385], [62.4992010268122, 10.946411052464383], [62.48191927824895, 10.96233824192743]],
+            var polygon_3aa41c30f049fb9a75c2c0dc31efa09a = L.polygon(
+                [[62.57426090666525, 11.383372953354604], [62.655391283383686, 10.887884138434522], [62.63516957448749, 10.87457825099011], [62.61448585840512, 10.865159772966035], [62.59350544949044, 10.859715016854349], [62.57239103764223, 10.858252053006254], [62.55128764368472, 10.860800663505634], [62.53037345753563, 10.867308106227018], [62.50979891271306, 10.87770642766481], [62.48971470876841, 10.89194768324968], [62.47028631738813, 10.909885549477423]],
                 {"bubblingMouseEvents": true, "color": "#110000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#110000", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_8f5935317b7845b4fecedae5ba8782e8);
+            ).addTo(map_27bb873ec1d99d9eeac3f9e20be2a578);
         
     
-            var polygon_bda83aed8d17fe744ea9c918cdbaeebc = L.polygon(
-                [[62.843910901735676, 11.28393618807073], [62.8196456383799, 11.431663587376224], [62.8256254394311, 11.435732251169593], [62.83173810841707, 11.438666295190046], [62.837955349715905, 11.440409513629367], [62.84420553711103, 11.440969843834964], [62.850461309329475, 11.440330183678007], [62.856668896133826, 11.438496283092732], [62.862774994044855, 11.435493532119258], [62.86874369172166, 11.431325592408104], [62.874522129737855, 11.426037601391295]],
+            var polygon_1716e7df69a32301e26adb560a5563a0 = L.polygon(
+                [[62.92630191812081, 11.145476314844043], [62.89007750793838, 11.367766636788701], [62.89904087317947, 11.373865683595493], [62.90822035839216, 11.378247144749556], [62.917533982299744, 11.380860507712779], [62.926918120667516, 11.38167255433254], [62.936301133153115, 11.380690415458414], [62.94561131137738, 11.377921237164779], [62.954768428478886, 11.373393007369026], [62.96371805483336, 11.367091154276396], [62.97238186748127, 11.359122658460434]],
                 {"bubblingMouseEvents": true, "color": "#220000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#220000", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_8f5935317b7845b4fecedae5ba8782e8);
+            ).addTo(map_27bb873ec1d99d9eeac3f9e20be2a578);
+        
+    
+            var circle_marker_f58cde8346f18910d022bf7047737dd1 = L.circleMarker(
+                [62.84382015129211, 11.285240021833635],
+                {"bubblingMouseEvents": true, "color": "cornflowerblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cornflowerblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_27bb873ec1d99d9eeac3f9e20be2a578);
+        
+    
+        var popup_a74c5728f8e483b14b4c0de4fdab1e1e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_213101db09190d5446d5cdbdc736e84c = $(`<div id="html_213101db09190d5446d5cdbdc736e84c" style="width: 100.0%; height: 100.0%;">hof annex eller aalens annex </div>`)[0];
+                popup_a74c5728f8e483b14b4c0de4fdab1e1e.setContent(html_213101db09190d5446d5cdbdc736e84c);
+            
+        
+
+        circle_marker_f58cde8346f18910d022bf7047737dd1.bindPopup(popup_a74c5728f8e483b14b4c0de4fdab1e1e)
+        ;
+
+        
+    
+    
+            circle_marker_f58cde8346f18910d022bf7047737dd1.bindTooltip(
+                `<div>
+                     hof annex eller aalens annex
+
+                 </div>`,
+                {"sticky": true}
+            );
         
 </script>
 </html>

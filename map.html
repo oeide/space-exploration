@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3513f4c9cc8bd8859f6b094049214bf1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3513f4c9cc8bd8859f6b094049214bf1" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3513f4c9cc8bd8859f6b094049214bf1 = L.map(
+                "map_3513f4c9cc8bd8859f6b094049214bf1",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_597e31ea95593be9805ccf20ff4cd640 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_597e31ea95593be9805ccf20ff4cd640.addTo(map_3513f4c9cc8bd8859f6b094049214bf1);
+        
+    
+            var tile_layer_a548071abd70f462c2c4f9abf60de933 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_a548071abd70f462c2c4f9abf60de933.addTo(map_3513f4c9cc8bd8859f6b094049214bf1);
+        
+    
+            var layer_control_69388252f3120f66265ef5467fac2188_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_a548071abd70f462c2c4f9abf60de933,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_69388252f3120f66265ef5467fac2188 = L.control.layers(
+                layer_control_69388252f3120f66265ef5467fac2188_layers.base_layers,
+                layer_control_69388252f3120f66265ef5467fac2188_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_3513f4c9cc8bd8859f6b094049214bf1);
+
+        
+    
+            var circle_marker_ccb4607cf6e1afbb676294a001d18af5 = L.circleMarker(
+                [62.567088941914655, 12.184547839741544],
+                {"bubblingMouseEvents": true, "color": "cornflowerblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cornflowerblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_3513f4c9cc8bd8859f6b094049214bf1);
+        
+    
+        var popup_e5372f624ed29c6a688b18f44a738ccd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c65411e6d244ace3240bc094d05ed268 = $(`<div id="html_c65411e6d244ace3240bc094d05ed268" style="width: 100.0%; height: 100.0%;">Rutten Field</div>`)[0];
+                popup_e5372f624ed29c6a688b18f44a738ccd.setContent(html_c65411e6d244ace3240bc094d05ed268);
+            
+        
+
+        circle_marker_ccb4607cf6e1afbb676294a001d18af5.bindPopup(popup_e5372f624ed29c6a688b18f44a738ccd)
+        ;
+
+        
+    
+    
+            circle_marker_ccb4607cf6e1afbb676294a001d18af5.bindTooltip(
+                `<div>
+                     Rutten Field
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f51366d22893f2c579c7ddcaee36b178 = L.circleMarker(
+                [62.64839002343069, 11.865049996169232],
+                {"bubblingMouseEvents": true, "color": "cornflowerblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cornflowerblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_3513f4c9cc8bd8859f6b094049214bf1);
+        
+    
+        var popup_2ab7a1e967483ac8a7abd83a9623bf4e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_04ebc23299e016ea37b322deec750823 = $(`<div id="html_04ebc23299e016ea37b322deec750823" style="width: 100.0%; height: 100.0%;">bræcke gaard</div>`)[0];
+                popup_2ab7a1e967483ac8a7abd83a9623bf4e.setContent(html_04ebc23299e016ea37b322deec750823);
+            
+        
+
+        circle_marker_f51366d22893f2c579c7ddcaee36b178.bindPopup(popup_2ab7a1e967483ac8a7abd83a9623bf4e)
+        ;
+
+        
+    
+    
+            circle_marker_f51366d22893f2c579c7ddcaee36b178.bindTooltip(
+                `<div>
+                     bræcke gaard
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e8e0ad2b84e4290d0fcf64bb5453d72a = L.circleMarker(
+                [62.57427015283483, 11.383389946885957],
+                {"bubblingMouseEvents": true, "color": "cornflowerblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cornflowerblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_3513f4c9cc8bd8859f6b094049214bf1);
+        
+    
+        var popup_184ad5d0bb6d99e341df408d1aee0aa3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fcd488cd98594bf2b2505cd45b68f691 = $(`<div id="html_fcd488cd98594bf2b2505cd45b68f691" style="width: 100.0%; height: 100.0%;">Røraas</div>`)[0];
+                popup_184ad5d0bb6d99e341df408d1aee0aa3.setContent(html_fcd488cd98594bf2b2505cd45b68f691);
+            
+        
+
+        circle_marker_e8e0ad2b84e4290d0fcf64bb5453d72a.bindPopup(popup_184ad5d0bb6d99e341df408d1aee0aa3)
+        ;
+
+        
+    
+    
+            circle_marker_e8e0ad2b84e4290d0fcf64bb5453d72a.bindTooltip(
+                `<div>
+                     Røraas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5fc67360b49fcf8d69bd6d11669a537e = L.circleMarker(
+                [62.84382015129211, 11.285240021833635],
+                {"bubblingMouseEvents": true, "color": "cornflowerblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cornflowerblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_3513f4c9cc8bd8859f6b094049214bf1);
+        
+    
+        var popup_31f29d8403b506063aa88aea6e1df09b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_67c0073a8a3e378f664b7800590af5aa = $(`<div id="html_67c0073a8a3e378f664b7800590af5aa" style="width: 100.0%; height: 100.0%;">hof annex eller aalens annex</div>`)[0];
+                popup_31f29d8403b506063aa88aea6e1df09b.setContent(html_67c0073a8a3e378f664b7800590af5aa);
+            
+        
+
+        circle_marker_5fc67360b49fcf8d69bd6d11669a537e.bindPopup(popup_31f29d8403b506063aa88aea6e1df09b)
+        ;
+
+        
+    
+    
+            circle_marker_5fc67360b49fcf8d69bd6d11669a537e.bindTooltip(
+                `<div>
+                     hof annex eller aalens annex
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_12054fa7fc6ea06e8ece995c0db19586 = L.circleMarker(
+                [62.92631019617185, 11.145479957738834],
+                {"bubblingMouseEvents": true, "color": "cornflowerblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cornflowerblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_3513f4c9cc8bd8859f6b094049214bf1);
+        
+    
+        var popup_f4098b54291ee242ad928032d8157633 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7116427228c973cbeceb38ebc5243e5e = $(`<div id="html_7116427228c973cbeceb38ebc5243e5e" style="width: 100.0%; height: 100.0%;">holtaalens hoved Kircke</div>`)[0];
+                popup_f4098b54291ee242ad928032d8157633.setContent(html_7116427228c973cbeceb38ebc5243e5e);
+            
+        
+
+        circle_marker_12054fa7fc6ea06e8ece995c0db19586.bindPopup(popup_f4098b54291ee242ad928032d8157633)
+        ;
+
+        
+    
+    
+            circle_marker_12054fa7fc6ea06e8ece995c0db19586.bindTooltip(
+                `<div>
+                     holtaalens hoved Kircke
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d4762087cc2bec573dec3b68a4c27da6 = L.circleMarker(
+                [62.94181045809142, 10.650589817942905],
+                {"bubblingMouseEvents": true, "color": "cornflowerblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cornflowerblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_3513f4c9cc8bd8859f6b094049214bf1);
+        
+    
+        var popup_93262800aca5ec9e4edbee795b2be6bc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_05c71d73f77e24796697c37b87a877cb = $(`<div id="html_05c71d73f77e24796697c37b87a877cb" style="width: 100.0%; height: 100.0%;">Singsaas annex</div>`)[0];
+                popup_93262800aca5ec9e4edbee795b2be6bc.setContent(html_05c71d73f77e24796697c37b87a877cb);
+            
+        
+
+        circle_marker_d4762087cc2bec573dec3b68a4c27da6.bindPopup(popup_93262800aca5ec9e4edbee795b2be6bc)
+        ;
+
+        
+    
+    
+            circle_marker_d4762087cc2bec573dec3b68a4c27da6.bindTooltip(
+                `<div>
+                     Singsaas annex
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_09d1b0ad40074a12b0f2f1f80589e53e = L.circleMarker(
+                [63.03143064412409, 10.291609896521214],
+                {"bubblingMouseEvents": true, "color": "cornflowerblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cornflowerblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_3513f4c9cc8bd8859f6b094049214bf1);
+        
+    
+        var popup_3f7b7f4b29a2824074aae0ab185fabf9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cddca030f4e1487b84c47082c6a18e8c = $(`<div id="html_cddca030f4e1487b84c47082c6a18e8c" style="width: 100.0%; height: 100.0%;">Størens hoved Kircke</div>`)[0];
+                popup_3f7b7f4b29a2824074aae0ab185fabf9.setContent(html_cddca030f4e1487b84c47082c6a18e8c);
+            
+        
+
+        circle_marker_09d1b0ad40074a12b0f2f1f80589e53e.bindPopup(popup_3f7b7f4b29a2824074aae0ab185fabf9)
+        ;
+
+        
+    
+    
+            circle_marker_09d1b0ad40074a12b0f2f1f80589e53e.bindTooltip(
+                `<div>
+                     Størens hoved Kircke
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cdd60345d886e3407458287ea0674063 = L.circleMarker(
+                [63.13712067161653, 10.25449981085728],
+                {"bubblingMouseEvents": true, "color": "cornflowerblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cornflowerblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_3513f4c9cc8bd8859f6b094049214bf1);
+        
+    
+        var popup_5320945fcedc1817ed86f460c817780f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_da1b24db0cc22a642a6d201957b734eb = $(`<div id="html_da1b24db0cc22a642a6d201957b734eb" style="width: 100.0%; height: 100.0%;">Horrigs annex</div>`)[0];
+                popup_5320945fcedc1817ed86f460c817780f.setContent(html_da1b24db0cc22a642a6d201957b734eb);
+            
+        
+
+        circle_marker_cdd60345d886e3407458287ea0674063.bindPopup(popup_5320945fcedc1817ed86f460c817780f)
+        ;
+
+        
+    
+    
+            circle_marker_cdd60345d886e3407458287ea0674063.bindTooltip(
+                `<div>
+                     Horrigs annex
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_26a70b46aa5fdc96d2b1e4a5ec5d00e9 = L.circleMarker(
+                [63.27367068053142, 10.29232992897147],
+                {"bubblingMouseEvents": true, "color": "cornflowerblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cornflowerblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_3513f4c9cc8bd8859f6b094049214bf1);
+        
+    
+        var popup_90160b03014f6dfb9bd50b2bfe3e1941 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_13a64160261fbba9a95bc1dc98fcc3cf = $(`<div id="html_13a64160261fbba9a95bc1dc98fcc3cf" style="width: 100.0%; height: 100.0%;">Meehl-hus hovet Kircke</div>`)[0];
+                popup_90160b03014f6dfb9bd50b2bfe3e1941.setContent(html_13a64160261fbba9a95bc1dc98fcc3cf);
+            
+        
+
+        circle_marker_26a70b46aa5fdc96d2b1e4a5ec5d00e9.bindPopup(popup_90160b03014f6dfb9bd50b2bfe3e1941)
+        ;
+
+        
+    
+    
+            circle_marker_26a70b46aa5fdc96d2b1e4a5ec5d00e9.bindTooltip(
+                `<div>
+                     Meehl-hus hovet Kircke
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8b1306eae438df62337d9e4220c450ff = L.circleMarker(
+                [63.324670620091624, 10.308029938246673],
+                {"bubblingMouseEvents": true, "color": "cornflowerblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cornflowerblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_3513f4c9cc8bd8859f6b094049214bf1);
+        
+    
+        var popup_5015aff611fe6ac988bf222c39940eb0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0d87e7704fc33f11173af703071d91eb = $(`<div id="html_0d87e7704fc33f11173af703071d91eb" style="width: 100.0%; height: 100.0%;">Solberg i Liinstrandens Annex</div>`)[0];
+                popup_5015aff611fe6ac988bf222c39940eb0.setContent(html_0d87e7704fc33f11173af703071d91eb);
+            
+        
+
+        circle_marker_8b1306eae438df62337d9e4220c450ff.bindPopup(popup_5015aff611fe6ac988bf222c39940eb0)
+        ;
+
+        
+    
+    
+            circle_marker_8b1306eae438df62337d9e4220c450ff.bindTooltip(
+                `<div>
+                     Solberg i Liinstrandens Annex
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_75bcef81385ca79c1955a0dec7bf8c7c = L.circleMarker(
+                [63.4304805963156, 10.395059854165433],
+                {"bubblingMouseEvents": true, "color": "cornflowerblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cornflowerblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_3513f4c9cc8bd8859f6b094049214bf1);
+        
+    
+        var popup_5cd662b351e8e99a5c0482bf82a83125 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_58980cd41cfd2545fabafbf4d3dae745 = $(`<div id="html_58980cd41cfd2545fabafbf4d3dae745" style="width: 100.0%; height: 100.0%;">Trondhiem</div>`)[0];
+                popup_5cd662b351e8e99a5c0482bf82a83125.setContent(html_58980cd41cfd2545fabafbf4d3dae745);
+            
+        
+
+        circle_marker_75bcef81385ca79c1955a0dec7bf8c7c.bindPopup(popup_5cd662b351e8e99a5c0482bf82a83125)
+        ;
+
+        
+    
+    
+            circle_marker_75bcef81385ca79c1955a0dec7bf8c7c.bindTooltip(
+                `<div>
+                     Trondhiem
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>

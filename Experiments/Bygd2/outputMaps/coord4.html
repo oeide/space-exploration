@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_fdf592bcc13f1deaf240915bcc48ec76 {
+                #map_db7c238d7b3350bd32b7afa616140bde {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_fdf592bcc13f1deaf240915bcc48ec76" ></div>
+            <div class="folium-map" id="map_db7c238d7b3350bd32b7afa616140bde" ></div>
         
 </body>
 <script>
     
     
-            var map_fdf592bcc13f1deaf240915bcc48ec76 = L.map(
-                "map_fdf592bcc13f1deaf240915bcc48ec76",
+            var map_db7c238d7b3350bd32b7afa616140bde = L.map(
+                "map_db7c238d7b3350bd32b7afa616140bde",
                 {
                     center: [62.84381914661988, 11.285225795826902],
                     crs: L.CRS.EPSG3857,
@@ -60,47 +60,83 @@
 
         
     
-            var tile_layer_94868b2d8cbd12f955d1b4b4f317cd30 = L.tileLayer(
+            var tile_layer_c07675d7c92fc86e7756b5feab6b0ba0 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_94868b2d8cbd12f955d1b4b4f317cd30.addTo(map_fdf592bcc13f1deaf240915bcc48ec76);
+            tile_layer_c07675d7c92fc86e7756b5feab6b0ba0.addTo(map_db7c238d7b3350bd32b7afa616140bde);
         
     
-            var tile_layer_6fbffac445500b6b68752edb755d7917 = L.tileLayer(
+            var tile_layer_aa028b4c1ac3eac2dab2546b4e0c8408 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            var layer_control_1bcbc655c139f0fa39f432c2f1fa4eee_layers = {
+            var layer_control_5aaed4de2d2590bba4dad08d75ce5b99_layers = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_94868b2d8cbd12f955d1b4b4f317cd30,
-                    "Esri Worldimagery" : tile_layer_6fbffac445500b6b68752edb755d7917,
+                    "openstreetmap" : tile_layer_c07675d7c92fc86e7756b5feab6b0ba0,
+                    "Esri Worldimagery" : tile_layer_aa028b4c1ac3eac2dab2546b4e0c8408,
                 },
                 overlays :  {
                 },
             };
-            let layer_control_1bcbc655c139f0fa39f432c2f1fa4eee = L.control.layers(
-                layer_control_1bcbc655c139f0fa39f432c2f1fa4eee_layers.base_layers,
-                layer_control_1bcbc655c139f0fa39f432c2f1fa4eee_layers.overlays,
+            let layer_control_5aaed4de2d2590bba4dad08d75ce5b99 = L.control.layers(
+                layer_control_5aaed4de2d2590bba4dad08d75ce5b99_layers.base_layers,
+                layer_control_5aaed4de2d2590bba4dad08d75ce5b99_layers.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_fdf592bcc13f1deaf240915bcc48ec76);
+            ).addTo(map_db7c238d7b3350bd32b7afa616140bde);
 
         
     
-            var polygon_4d0e08e3876556aec6423fa8393b97c1 = L.polygon(
-                [[62.84381914661988, 11.285225795826902], [62.86791979286732, 11.137262327269033], [62.8619407890635, 11.133247972810748], [62.85581330641608, 11.130376055603506], [62.849601712226125, 11.128696428628956], [62.84334186361221, 11.128203628015497], [62.837088036666664, 11.128909409331872], [62.83089393809043, 11.13080593904836], [62.82478584138555, 11.133869368202053], [62.81883530648918, 11.138089597230685], [62.813068016615276, 11.14342333338754]],
+            var polygon_dc3f75d1b705daf3a95ad2a8f178f20a = L.polygon(
+                [[62.84381914661988, 11.285225795826902], [62.87991556316446, 11.063190851042814], [62.87093953802823, 11.05719092060044], [62.86175089834186, 11.052915333372052], [62.85243202689311, 11.050410505917672], [62.843046785020825, 11.049705534613741], [62.83366682035572, 11.050789075077237], [62.824363712807404, 11.053649807003335], [62.81521738168364, 11.05825570558119], [62.80628191863395, 11.06461761239098], [62.797634931517265, 11.072625529120508]],
                 {"bubblingMouseEvents": true, "color": "#110000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#110000", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_fdf592bcc13f1deaf240915bcc48ec76);
+            ).addTo(map_db7c238d7b3350bd32b7afa616140bde);
         
     
-            var polygon_13d965869366a6135f52f27b0ee6f301 = L.polygon(
+            var polygon_1fdf397cdd1d7fc76f6054d1858785a6 = L.polygon(
                 [[62.94180765200713, 10.650586287879817], [62.87055722032234, 11.096036173143133], [62.888515388513355, 11.108081775640741], [62.9068894438544, 11.116677430513837], [62.925533451528004, 11.121718061506172], [62.94430392631455, 11.123196312726906], [62.96305603180348, 11.121065328429072], [62.98166473107424, 11.115354530113883], [62.99996836041585, 11.10607868624435], [63.01783403784446, 11.093328248272394], [63.03511915970838, 11.077175906513347]],
                 {"bubblingMouseEvents": true, "color": "#220000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#220000", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_fdf592bcc13f1deaf240915bcc48ec76);
+            ).addTo(map_db7c238d7b3350bd32b7afa616140bde);
+        
+    
+            var polygon_9b8634301ab01360faee2d2b62faa005 = L.polygon(
+                [[62.87421112665497, 11.098483116989252], [62.87991556316446, 11.063190851042814], [62.87627002938376, 11.060746668181128], [62.87055722032234, 11.096036173143133]],
+                {"bubblingMouseEvents": true, "color": "#ff0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_db7c238d7b3350bd32b7afa616140bde);
+        
+    
+            var circle_marker_dbd8f245bfdfc55e2e79c46ac3832feb = L.circleMarker(
+                [62.92631019617185, 11.145479957738834],
+                {"bubblingMouseEvents": true, "color": "cornflowerblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cornflowerblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_db7c238d7b3350bd32b7afa616140bde);
+        
+    
+        var popup_9d16fa3f5c203490b7b73abc187f69d9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e999943e9f0047465281febca7ae0662 = $(`<div id="html_e999943e9f0047465281febca7ae0662" style="width: 100.0%; height: 100.0%;">holtaalens hoved Kircke </div>`)[0];
+                popup_9d16fa3f5c203490b7b73abc187f69d9.setContent(html_e999943e9f0047465281febca7ae0662);
+            
+        
+
+        circle_marker_dbd8f245bfdfc55e2e79c46ac3832feb.bindPopup(popup_9d16fa3f5c203490b7b73abc187f69d9)
+        ;
+
+        
+    
+    
+            circle_marker_dbd8f245bfdfc55e2e79c46ac3832feb.bindTooltip(
+                `<div>
+                     holtaalens hoved Kircke
+
+                 </div>`,
+                {"sticky": true}
+            );
         
 </script>
 </html>

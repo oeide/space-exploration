@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_c73925fb70d7c2828bb9874c9a8fb539 {
+                #map_295957d7e0de62ef9fbadb450737a554 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_c73925fb70d7c2828bb9874c9a8fb539" ></div>
+            <div class="folium-map" id="map_295957d7e0de62ef9fbadb450737a554" ></div>
         
 </body>
 <script>
     
     
-            var map_c73925fb70d7c2828bb9874c9a8fb539 = L.map(
-                "map_c73925fb70d7c2828bb9874c9a8fb539",
+            var map_295957d7e0de62ef9fbadb450737a554 = L.map(
+                "map_295957d7e0de62ef9fbadb450737a554",
                 {
                     center: [63.27366974381001, 10.292312508946994],
                     crs: L.CRS.EPSG3857,
@@ -60,47 +60,77 @@
 
         
     
-            var tile_layer_47cc4f6af13b7a46f24cace2077bee4d = L.tileLayer(
+            var tile_layer_3e795ed3b866152406040cc8acbdceb7 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_47cc4f6af13b7a46f24cace2077bee4d.addTo(map_c73925fb70d7c2828bb9874c9a8fb539);
+            tile_layer_3e795ed3b866152406040cc8acbdceb7.addTo(map_295957d7e0de62ef9fbadb450737a554);
         
     
-            var tile_layer_4c692be45e6050047b2849fd4ce2c531 = L.tileLayer(
+            var tile_layer_72bafa21012e85ffdd9a4c5a23753412 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            var layer_control_e63d045f5749c536a9a7c6cd2cd699bc_layers = {
+            var layer_control_4432725ea177998c8d09e1749a960f04_layers = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_47cc4f6af13b7a46f24cace2077bee4d,
-                    "Esri Worldimagery" : tile_layer_4c692be45e6050047b2849fd4ce2c531,
+                    "openstreetmap" : tile_layer_3e795ed3b866152406040cc8acbdceb7,
+                    "Esri Worldimagery" : tile_layer_72bafa21012e85ffdd9a4c5a23753412,
                 },
                 overlays :  {
                 },
             };
-            let layer_control_e63d045f5749c536a9a7c6cd2cd699bc = L.control.layers(
-                layer_control_e63d045f5749c536a9a7c6cd2cd699bc_layers.base_layers,
-                layer_control_e63d045f5749c536a9a7c6cd2cd699bc_layers.overlays,
+            let layer_control_4432725ea177998c8d09e1749a960f04 = L.control.layers(
+                layer_control_4432725ea177998c8d09e1749a960f04_layers.base_layers,
+                layer_control_4432725ea177998c8d09e1749a960f04_layers.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_c73925fb70d7c2828bb9874c9a8fb539);
+            ).addTo(map_295957d7e0de62ef9fbadb450737a554);
 
         
     
-            var polygon_49d910d106225f0987ae203d4a7788fd = L.polygon(
+            var polygon_5024b39612a891472e49cc180db9c80d = L.polygon(
                 [[63.27366974381001, 10.292312508946994], [63.3380222604159, 10.221811340246132], [63.33501212928006, 10.209583262320987], [63.33152855649383, 10.198017017377353], [63.327609496783914, 10.187166621700701], [63.32327569782525, 10.17710883190791], [63.31856715225248, 10.16795703523321], [63.31351153847443, 10.159726500949235], [63.308157793322785, 10.152528783865895], [63.30253425471525, 10.146398748866446], [63.296696070153935, 10.14136662216755], [63.29069078216731, 10.137503765026786], [63.2845453076479, 10.134804974255342], [63.278324344674964, 10.133318546701418], [63.27206369472359, 10.133037665557737], [63.265817693558965, 10.133972341360371], [63.259639966207224, 10.136112737868306], [63.253556600748915, 10.139433736167373], [63.24763905040263, 10.14392258786265], [63.241912672528684, 10.149534480751164], [63.23642963381008, 10.15622020086963], [63.231224875743116, 10.1639534979132], [63.22634918638834, 10.1726457703305], [63.22182787239247, 10.182252723448842], [63.217711722576155, 10.192686085518716], [63.214007489793566, 10.203885017809625], [63.210765316202995, 10.215741753432418], [63.2080009286584, 10.228194255097899], [63.20573701885296, 10.241119681530577]],
                 {"bubblingMouseEvents": true, "color": "#110000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#110000", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_c73925fb70d7c2828bb9874c9a8fb539);
+            ).addTo(map_295957d7e0de62ef9fbadb450737a554);
         
     
-            var polygon_ae20bfb4ab3a914940b4353b81b6bbfd = L.polygon(
+            var polygon_7e3e574cb14c3b270c50a07138ca62be = L.polygon(
                 [[63.43047824651148, 10.395042765184668], [63.366031121270396, 10.465415694529302], [63.369027903035764, 10.477663089555952], [63.37248080938323, 10.489300303339972], [63.37638621540351, 10.500208026591286], [63.38069704135317, 10.510313695641809], [63.38538473543413, 10.51956171952325], [63.39041054552588, 10.527857863362694], [63.39575549128109, 10.535164787327425], [63.40135396946105, 10.54139212453817], [63.40717802812918, 10.546503645166936], [63.41318242133452, 10.55048576144908], [63.419311062914154, 10.55326628455562], [63.42552884827373, 10.554870003422405], [63.431788584129805, 10.555223193722341], [63.438037831466914, 10.55437333969611], [63.444231824306456, 10.552326609155651], [63.45031619654152, 10.549070601393622], [63.45625569343396, 10.544630159088564], [63.46199776369058, 10.53905299365047], [63.46749815867921, 10.53236554014983], [63.4727144891752, 10.524654369377496], [63.47761079882137, 10.515924779379299], [63.48215488680689, 10.50630225742933], [63.486301838394375, 10.495793801033653], [63.49002009818629, 10.484545256491726], [63.49328328809735, 10.472581129114529], [63.496068842508485, 10.460046172281833], [63.49836063573232, 10.44700377876751]],
                 {"bubblingMouseEvents": true, "color": "#220000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#220000", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_c73925fb70d7c2828bb9874c9a8fb539);
+            ).addTo(map_295957d7e0de62ef9fbadb450737a554);
+        
+    
+            var circle_marker_1c7e285ed26eeefc69524f4776d69b99 = L.circleMarker(
+                [63.324670620091624, 10.308029938246673],
+                {"bubblingMouseEvents": true, "color": "cornflowerblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cornflowerblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_295957d7e0de62ef9fbadb450737a554);
+        
+    
+        var popup_b40c9de2a46523c389d9ea1dc1258739 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e09240bb86fd848efbbb0e4df4855d60 = $(`<div id="html_e09240bb86fd848efbbb0e4df4855d60" style="width: 100.0%; height: 100.0%;">Solberg i Liinstrandens Annex </div>`)[0];
+                popup_b40c9de2a46523c389d9ea1dc1258739.setContent(html_e09240bb86fd848efbbb0e4df4855d60);
+            
+        
+
+        circle_marker_1c7e285ed26eeefc69524f4776d69b99.bindPopup(popup_b40c9de2a46523c389d9ea1dc1258739)
+        ;
+
+        
+    
+    
+            circle_marker_1c7e285ed26eeefc69524f4776d69b99.bindTooltip(
+                `<div>
+                     Solberg i Liinstrandens Annex
+
+                 </div>`,
+                {"sticky": true}
+            );
         
 </script>
 </html>

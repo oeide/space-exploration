@@ -120,4 +120,35 @@ def drawNoOverlap(shapelist, colorIn, pointUTM):
         my_map.save("result.html")
 """
 
+def drawPointOnly(pointsUTM):
+    #my_map = folium.Map(location=shapelist[0].shape[0], zoom_start=8, tiles=None)
+    my_map = folium.Map(location=shapelist[0].shape[0], zoom_start=8, tiles=None)
+    folium.TileLayer("OpenStreetMap").add_to(my_map)
+    folium.TileLayer(tileprovider, show=False, name="Esri Worldimagery").add_to(my_map)
+    folium.LayerControl().add_to(my_map)
+    
+    # create lat-long for the points to add
+    coordLines= re.split("#", pointsUTM)
+    for pointUTM in coordlines:
+        coordsUTM= re.split(",", pointUTM)
+        pointLatLong= utm.to_latlon(float(coordsUTM[0]), float(coordsUTM[1]), int(coordsUTM[2]), coordsUTM[3])
+        placeName= coordsUTM[4]
+    
+        i=0
+        folium.CircleMarker(
+            location=pointLatLong,
+            radius=10,
+            color="cornflowerblue",
+            stroke=True,
+            fill=True,
+            fill_opacity=0.6,
+            opacity=1,
+            popup=placeName,
+            tooltip=placeName
+        ).add_to(my_map)
 
+    print("Before show my map")
+    map_path= my_map.show_in_browser()
+    del my_map
+    print("After show my map"+map_path)
+    return map_path

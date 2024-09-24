@@ -52,14 +52,12 @@ def csv_reader(filepath: str):
             fileOut.write("utm," + row_list[iAfter]["Xord"] + " " + row_list[iAfter]["Yord"] + " " +
                   row_list[iAfter]["Zone"] + " S,direction," + str(int(row_list[iAfter]["Distance"]) * distMiil) +
                   " " + str(int(eastMiddle-(span/2))) + " " + str(int(eastMiddle+(span/2)))+"\n")
-            fileOutPoint.write(row_list[i]["Xord"] + " " + row_list[i]["Yord"])
+            fileOutPoint.write(row_list[i]["Xord"] + "," + row_list[i]["Yord"] + ",33,S," + row_list[i]["Place"])
             i= i+1
             fileOut.write("\n")
             fileOut.close()
             fileOutPoint.write("\n")
             fileOutPoint.close()
-            #print("Calling map generation for " + filename + " with color "+color+"\n")
-            #generate_map_from_file(filename, color)
             
 # Parameters, later to be modified in experiments
 west1= "130"

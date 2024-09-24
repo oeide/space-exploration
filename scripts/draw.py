@@ -1,6 +1,8 @@
 #from foliumLocal import *
 import folium
 from xyzservices import TileProvider
+import utm_no_numpy as utm
+import re
 
 tileprovider = TileProvider(
     name="Esri Worldimagery",
@@ -9,7 +11,7 @@ tileprovider = TileProvider(
                 "IGP, UPR-EGP, and the GIS User Community", )
 
 
-def draw(shapelist, schnittflaeche, colorIn):
+def draw(shapelist, schnittflaeche, colorIn, pointUTM):
     """
     Draws polygon on map (leaflet), shows result in browser
     :param shapelist: List of Polygons to be drawn in WGS84 Decimal
@@ -20,6 +22,12 @@ def draw(shapelist, schnittflaeche, colorIn):
     folium.TileLayer("OpenStreetMap").add_to(my_map)
     folium.TileLayer(tileprovider, show=False, name="Esri Worldimagery").add_to(my_map)
     folium.LayerControl().add_to(my_map)
+    
+    # create lat-long for the point to add
+    coordsUTM= re.split(",", pointUTM)
+    pointLatLong= utm.to_latlon(float(coordsUTM[0]), float(coordsUTM[1]), int(coordsUTM[2]), coordsUTM[3])
+    placeName= coordsUTM[4]
+    
     i=0
     for y in shapelist:
         i= i+1
@@ -41,13 +49,25 @@ def draw(shapelist, schnittflaeche, colorIn):
         fill_opacity=0.15,
         fill=True,
     ).add_to(my_map)
+    folium.CircleMarker(
+        location=pointLatLong,
+        radius=10,
+        color="cornflowerblue",
+        stroke=True,
+        fill=True,
+        fill_opacity=0.6,
+        opacity=1,
+        popup=placeName,
+        tooltip=placeName
+    ).add_to(my_map)
+
     #print("Before show my map")
     map_path= my_map.show_in_browser()
     del my_map
     #print("After show my map: "+map_path)
     return map_path
 
-def drawNoOverlap(shapelist, colorIn):
+def drawNoOverlap(shapelist, colorIn, pointUTM):
     """
     Draws polygon on map (leaflet), shows result in browser
     :param shapelist: List of Polygons to be drawn in WGS84 Decimal
@@ -57,6 +77,12 @@ def drawNoOverlap(shapelist, colorIn):
     folium.TileLayer("OpenStreetMap").add_to(my_map)
     folium.TileLayer(tileprovider, show=False, name="Esri Worldimagery").add_to(my_map)
     folium.LayerControl().add_to(my_map)
+    
+    # create lat-long for the point to add
+    coordsUTM= re.split(",", pointUTM)
+    pointLatLong= utm.to_latlon(float(coordsUTM[0]), float(coordsUTM[1]), int(coordsUTM[2]), coordsUTM[3])
+    placeName= coordsUTM[4]
+    
     i=0
     for y in shapelist:
         i= i+1
@@ -72,15 +98,15 @@ def drawNoOverlap(shapelist, colorIn):
             color=color
         ).add_to(my_map)
     folium.CircleMarker(
-        location=[50, 50],
-        radius=100,
+        location=pointLatLong,
+        radius=10,
         color="cornflowerblue",
         stroke=True,
         fill=True,
         fill_opacity=0.6,
         opacity=1,
-        popup="{} pixels".format(100),
-        tooltip="I am in pixels"
+        popup=placeName,
+        tooltip=placeName
     ).add_to(my_map)
 
     #print("Before show my map")

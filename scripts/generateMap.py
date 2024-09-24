@@ -199,6 +199,13 @@ def check_intersection(subj, clip):
     return scale_from_clipper(pc.Execute(pyclipper.CT_INTERSECTION, pyclipper.PFT_POSITIVE, pyclipper.PFT_POSITIVE))
     
 def generate_map_from_file(filepath: str, color: str):
+    #Add the assumed loation of the place as a point
+    pointFileName= filepath[0:len(filepath)-3]+"txt"
+    print("pointFileName: "+pointFileName)
+    pointFile= open(pointFileName, 'r')
+    pointLine= pointFile.readline()
+    print("Point: "+pointLine)
+    
     print("Enter generate_map_from_file with "+filepath)
     get_input_filename(filepath)
     schnittflache = check_intersection(shapeList[-1].path, shapeList[0].path)
@@ -215,19 +222,10 @@ def generate_map_from_file(filepath: str, color: str):
         else:
             zone_get = input_dict[0]
         map_path= draw.draw(shapeList, pizzacut.latlon_conv(tuple(tuple(sub) for sub in schnittflache[0]), zone_get.utm["zone_numb"],
-                                              zone_get.utm["zone_let"]), color)
+                                              zone_get.utm["zone_let"]), color, pointLine)
     else:
         print("\nNo overlap! Length schnittflache: " + str(len(schnittflache)) + "\n")
-        map_path= draw.drawNoOverlap(shapeList, color)
+        map_path= draw.drawNoOverlap(shapeList, color, pointLine)
     #print("map_path in generate_map_from_file: "+map_path)
     
-    #Add the assumed loation of the place as a point
-    """
-    pointFileName= filepath[0:len(filepath)-3]+"txt"
-    print("pointFileName: "+pointFileName)
-    pointFile= open(pointFileName, 'r')
-    pointLine= pointFile.readline()
-    print("Point: "+pointLine)
-    map_path= draw.addPointToShapelist(pointLine)
-    """
     return map_path

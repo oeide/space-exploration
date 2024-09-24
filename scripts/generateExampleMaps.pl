@@ -8,7 +8,7 @@ system("$komm0");
 
 if ($#ARGV != 0)
 {
-    print "Use: generateExampleMaps.pl <rootFolder>\n";
+    print "˜´\n\nUse: generateExampleMaps.pl <rootFolder>\n\n";
 }
 else
 {

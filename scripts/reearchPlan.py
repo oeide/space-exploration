@@ -67,8 +67,8 @@ east1= "310"
 east2= "410"
 eastMiddle= 360
 
-span= 225
-distMiil= 6
+span= 270
+distMiil= 13
 
 root= "/Users/oeide/Documents/GitHub/space-exploration/"
 

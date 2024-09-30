@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_24ee1c86a0ff70eaf4c6e1acdc70f348 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_24ee1c86a0ff70eaf4c6e1acdc70f348" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_24ee1c86a0ff70eaf4c6e1acdc70f348 = L.map(
+                "map_24ee1c86a0ff70eaf4c6e1acdc70f348",
+                {
+                    center: [62.84381914661988, 11.285225795826902],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b8c647ca978ecb853cad3c74a235a36d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_b8c647ca978ecb853cad3c74a235a36d.addTo(map_24ee1c86a0ff70eaf4c6e1acdc70f348);
+        
+    
+            var tile_layer_4dc570b6549cedb723be737d98d6d87e = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            var layer_control_ab06b3b8c6e25d2cd6c5f71ea6d76dde_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_b8c647ca978ecb853cad3c74a235a36d,
+                    "Esri Worldimagery" : tile_layer_4dc570b6549cedb723be737d98d6d87e,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_ab06b3b8c6e25d2cd6c5f71ea6d76dde = L.control.layers(
+                layer_control_ab06b3b8c6e25d2cd6c5f71ea6d76dde_layers.base_layers,
+                layer_control_ab06b3b8c6e25d2cd6c5f71ea6d76dde_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_24ee1c86a0ff70eaf4c6e1acdc70f348);
+
+        
+    
+            var polygon_14139e363bd7ca1781945a1aaa103d04 = L.polygon(
+                [[62.84381914661988, 11.285225795826902], [62.91982364090475, 11.344919306721184], [62.92191111628531, 11.330149803196731], [62.9234045646998, 11.315058478355713], [62.924288039090634, 11.299727070792759], [62.924555618989906, 11.284275557034885], [62.92421091227206, 11.268842456135879], [62.92324758640814, 11.253528121691323], [62.9216872685711, 11.238468737735014], [62.919523721822074, 11.223764558738232], [62.91678709941721, 11.209530788213115], [62.91349811004977, 11.195863996468209], [62.90966960097931, 11.182901051218316], [62.90533972441167, 11.170716236648305], [62.90054717995274, 11.159403281256424], [62.89532172564559, 11.14905688670913], [62.88970154455048, 11.13975075832591], [62.883724815956434, 11.131558412651778], [62.877456574508706, 11.12454963466052], [62.87092493805941, 11.11875953105299], [62.86419435904431, 11.114237954920025], [62.8573018560508, 11.111018576685886], [62.850311279074226, 11.10913141752441], [62.843276945382755, 11.108588018859122], [62.836234682678295, 11.10938267655349], [62.82926505483082, 11.111503772120853], [62.82239540093072, 11.114966412543222], [62.81569563422842, 11.119701530733698], [62.80921093533264, 11.125722024097664], [62.80299217298337, 11.132922300305044], [62.797074983135374, 11.141297125616651], [62.79151969671887, 11.150759637417755], [62.78635977674955, 11.1612266956208], [62.781638177829585, 11.172633735967882], [62.777388370371334, 11.184897994632033], [62.7736522648048, 11.197916190737654], [62.770436501418565, 11.211609397971959], [62.76778251536185, 11.225855134885784], [62.765704916412226, 11.24053453361587], [62.76421940233578, 11.25556792681309], [62.76334014541254, 11.270817110956028], [62.763072937107616, 11.286164627667157], [62.76341517788858, 11.301513715422278], [62.76437275480687, 11.316746941533717], [62.765924223423845, 11.331730654631615], [62.76807659241191, 11.346386416176411], [62.770799044583455, 11.360561964544514]],
+                {"bubblingMouseEvents": true, "color": "#110000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#110000", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_24ee1c86a0ff70eaf4c6e1acdc70f348);
+        
+    
+            var polygon_2e8bb6225d58e04ad5334d47b1fdb56a = L.polygon(
+                [[62.94180765200713, 10.650586287879817], [62.78921633864024, 10.535050099246511], [62.78520509954618, 10.56451880514908], [62.78237796599797, 10.594665366392954], [62.7807618031973, 10.625214402160868], [62.780358677662775, 10.655953386183052], [62.78118814163223, 10.686647702378476], [62.78322520086413, 10.71706929159896], [62.78646355023021, 10.747006827067635], [62.79087798159619, 10.776212219866427], [62.79643628170181, 10.804496899566415], [62.80310462917799, 10.831613143173513], [62.81081470916794, 10.857356791258816], [62.81951736585522, 10.881559577005993], [62.82915398400924, 10.904034232736764], [62.83964809727041, 10.92459522255459], [62.85091544511242, 10.943096620487273], [62.862871751366235, 10.95939173810391], [62.87543326351224, 10.973352759199956], [62.8885077683923, 10.984872043422364], [62.90197665778859, 10.993864653395562], [62.91576597602531, 11.000239026301566], [62.92975014474881, 11.003989109702063], [62.94382807208366, 11.005026366747373], [62.957892903731356, 11.003381237252828], [62.97183651829396, 10.99904489227748], [62.98556015359936, 10.9920270646375], [62.998949233682836, 10.982418951523846], [63.01191480152039, 10.970269124393809], [63.024342051991155, 10.955669749589799], [63.036134565593485, 10.938730865096774], [63.04721376710761, 10.919560702551934], [63.05749380178029, 10.898328641950245], [63.06688882837353, 10.875204889449167], [63.07533036750999, 10.850338190705855], [63.0827511476704, 10.82391753069507], [63.08909411304625, 10.79617086318268], [63.094310709716176, 10.767305800127202], [63.09836147724181, 10.737529244665078], [63.10120830977488, 10.707088109933844], [63.10284849866755, 10.676204651603724], [63.103244333962905, 10.645126424293641], [63.10241201447169, 10.61409310602069], [63.10034943289546, 10.583327242593224], [63.09706486097474, 10.553089390333426], [63.09260195123144, 10.52361456938226], [63.08698601280672, 10.495120332356235]],
+                {"bubblingMouseEvents": true, "color": "#220000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#220000", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_24ee1c86a0ff70eaf4c6e1acdc70f348);
+        
+    
+            var circle_marker_3c7814d0a9b989656b9189ad5d8243f3 = L.circleMarker(
+                [62.92631019617185, 11.145479957738834],
+                {"bubblingMouseEvents": true, "color": "cornflowerblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cornflowerblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_24ee1c86a0ff70eaf4c6e1acdc70f348);
+        
+    
+        var popup_c473579084c55187bbe41a6d7a9f8835 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_af152ab617140d4f665e72e57ecccd5e = $(`<div id="html_af152ab617140d4f665e72e57ecccd5e" style="width: 100.0%; height: 100.0%;">holtaalens hoved Kircke </div>`)[0];
+                popup_c473579084c55187bbe41a6d7a9f8835.setContent(html_af152ab617140d4f665e72e57ecccd5e);
+            
+        
+
+        circle_marker_3c7814d0a9b989656b9189ad5d8243f3.bindPopup(popup_c473579084c55187bbe41a6d7a9f8835)
+        ;
+
+        
+    
+    
+            circle_marker_3c7814d0a9b989656b9189ad5d8243f3.bindTooltip(
+                `<div>
+                     holtaalens hoved Kircke
+
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>

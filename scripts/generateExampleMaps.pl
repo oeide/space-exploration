@@ -20,6 +20,8 @@ else
     readthis($rot, $scriptRoot);
 }
 
+
+
 sub readthis
 {
     my $path = @_[0];

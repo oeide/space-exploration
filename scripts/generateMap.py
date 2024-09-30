@@ -201,12 +201,12 @@ def check_intersection(subj, clip):
 def generate_map_from_file(filepath: str, color: str):
     #Add the assumed loation of the place as a point
     pointFileName= filepath[0:len(filepath)-3]+"txt"
-    print("pointFileName: "+pointFileName)
+    #print("pointFileName: "+pointFileName)
     pointFile= open(pointFileName, 'r')
     pointLine= pointFile.readline()
-    print("Point: "+pointLine)
+    #print("Point: "+pointLine)
     
-    print("Enter generate_map_from_file with "+filepath)
+    #print("Enter generate_map_from_file with "+filepath)
     get_input_filename(filepath)
     schnittflache = check_intersection(shapeList[-1].path, shapeList[0].path)
     i = 1

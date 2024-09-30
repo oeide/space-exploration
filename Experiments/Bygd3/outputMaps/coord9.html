@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_b5965644b29a7bc2dd753eeb47c8bcff {
+                #map_ad3f482205f24825f5c9c99bd21300a7 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_b5965644b29a7bc2dd753eeb47c8bcff" ></div>
+            <div class="folium-map" id="map_ad3f482205f24825f5c9c99bd21300a7" ></div>
         
 </body>
 <script>
     
     
-            var map_b5965644b29a7bc2dd753eeb47c8bcff = L.map(
-                "map_b5965644b29a7bc2dd753eeb47c8bcff",
+            var map_ad3f482205f24825f5c9c99bd21300a7 = L.map(
+                "map_ad3f482205f24825f5c9c99bd21300a7",
                 {
                     center: [63.27366974381001, 10.292312508946994],
                     crs: L.CRS.EPSG3857,
@@ -60,47 +60,77 @@
 
         
     
-            var tile_layer_588fae7807ee7d094b3900c0266a3cbc = L.tileLayer(
+            var tile_layer_e463d50e58f336f48ae5936fbdd7a415 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_588fae7807ee7d094b3900c0266a3cbc.addTo(map_b5965644b29a7bc2dd753eeb47c8bcff);
+            tile_layer_e463d50e58f336f48ae5936fbdd7a415.addTo(map_ad3f482205f24825f5c9c99bd21300a7);
         
     
-            var tile_layer_930713cc87e049e80cb3dbebbd71c2c4 = L.tileLayer(
+            var tile_layer_c7b5b11f6f5408e6e9c322256f797a6d = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            var layer_control_fb6db9b7add96834b0c127e3654bc117_layers = {
+            var layer_control_885220339336fdab93a335e721ca2af1_layers = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_588fae7807ee7d094b3900c0266a3cbc,
-                    "Esri Worldimagery" : tile_layer_930713cc87e049e80cb3dbebbd71c2c4,
+                    "openstreetmap" : tile_layer_e463d50e58f336f48ae5936fbdd7a415,
+                    "Esri Worldimagery" : tile_layer_c7b5b11f6f5408e6e9c322256f797a6d,
                 },
                 overlays :  {
                 },
             };
-            let layer_control_fb6db9b7add96834b0c127e3654bc117 = L.control.layers(
-                layer_control_fb6db9b7add96834b0c127e3654bc117_layers.base_layers,
-                layer_control_fb6db9b7add96834b0c127e3654bc117_layers.overlays,
+            let layer_control_885220339336fdab93a335e721ca2af1 = L.control.layers(
+                layer_control_885220339336fdab93a335e721ca2af1_layers.base_layers,
+                layer_control_885220339336fdab93a335e721ca2af1_layers.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_b5965644b29a7bc2dd753eeb47c8bcff);
+            ).addTo(map_ad3f482205f24825f5c9c99bd21300a7);
 
         
     
-            var polygon_8975926d92c9a7bd5d52907d75aa509d = L.polygon(
+            var polygon_1eebf8b7e713ca7607b10a2537959dc3 = L.polygon(
                 [[63.27366974381001, 10.292312508946994], [63.320486747570236, 10.171515314799052], [63.31557118928552, 10.162900085985376], [63.31032925217332, 10.155282532329972], [63.304816783929205, 10.148712946616099], [63.29905384728116, 10.14324750709659], [63.29311346416963, 10.13891334628641], [63.28701497699928, 10.135746548219315], [63.28082241549727, 10.133775567911952], [63.274572273066, 10.133013466481968], [63.26831821777648, 10.133450402095427], [63.26209736174587, 10.135119258931544], [63.255970894852766, 10.137969006129376], [63.24998345358106, 10.141991396250285], [63.24417002603135, 10.147159913120678], [63.23859172835137, 10.153423789496852], [63.23327388882, 10.160738398384572], [63.228259708065, 10.169056236007576], [63.223591703634376, 10.178310119565358], [63.219312392539884, 10.188433030815341]],
                 {"bubblingMouseEvents": true, "color": "#110000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#110000", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_b5965644b29a7bc2dd753eeb47c8bcff);
+            ).addTo(map_ad3f482205f24825f5c9c99bd21300a7);
         
     
-            var polygon_c5e15ef449d1e37e0370dbb9674d880b = L.polygon(
+            var polygon_8d970335a90561b9cad3c916ab04bbc0 = L.polygon(
                 [[63.43047824651148, 10.395042765184668], [63.38346467355704, 10.51597340789671], [63.38835942171544, 10.524669713745219], [63.39358218702279, 10.532375516049992], [63.39908651706313, 10.539037619238897], [63.404825946075434, 10.544602681596288], [63.41076356160374, 10.549035802110096], [63.41684453293605, 10.55230475853861], [63.42304084693756, 10.554373073778125], [63.42928034574449, 10.555231123062558], [63.43554452739216, 10.554860915179813], [63.44176241681256, 10.553292750280402], [63.44789755521414, 10.550511434330176], [63.45389680385701, 10.546544568328434], [63.45972489299133, 10.541417048030077], [63.465329258711854, 10.53517665169544], [63.47066626727614, 10.527869891733696], [63.47569227110324, 10.51954341863016], [63.48038213514358, 10.510261231297006], [63.484692828116756, 10.500090289520355]],
                 {"bubblingMouseEvents": true, "color": "#220000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#220000", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_b5965644b29a7bc2dd753eeb47c8bcff);
+            ).addTo(map_ad3f482205f24825f5c9c99bd21300a7);
+        
+    
+            var circle_marker_b88b367e332388727f2cf4f985d9efad = L.circleMarker(
+                [63.324670620091624, 10.308029938246673],
+                {"bubblingMouseEvents": true, "color": "cornflowerblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cornflowerblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ad3f482205f24825f5c9c99bd21300a7);
+        
+    
+        var popup_8a6b8147f17a6f8cbc7e233e1a4bdbc5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2fbe14f015b8376d32fbf5f95274897a = $(`<div id="html_2fbe14f015b8376d32fbf5f95274897a" style="width: 100.0%; height: 100.0%;">Solberg i Liinstrandens Annex </div>`)[0];
+                popup_8a6b8147f17a6f8cbc7e233e1a4bdbc5.setContent(html_2fbe14f015b8376d32fbf5f95274897a);
+            
+        
+
+        circle_marker_b88b367e332388727f2cf4f985d9efad.bindPopup(popup_8a6b8147f17a6f8cbc7e233e1a4bdbc5)
+        ;
+
+        
+    
+    
+            circle_marker_b88b367e332388727f2cf4f985d9efad.bindTooltip(
+                `<div>
+                     Solberg i Liinstrandens Annex
+
+                 </div>`,
+                {"sticky": true}
+            );
         
 </script>
 </html>

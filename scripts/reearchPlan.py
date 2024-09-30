@@ -47,10 +47,10 @@ def csv_reader(filepath: str):
             #print("utm," + row_list[i]["Xord"] + " " + row_list[i]["Yord"] + " " + row_list[i]["Zone"] + " S,direction," + str(int(row_list[i]["Distance"]) * distMiil) + " " + west1 + west2)
             fileOut.write("cs,coordinates,type,verweis\n")
             fileOut.write("utm," + row_list[iBefore]["Xord"] + " " + row_list[iBefore]["Yord"] + " " +
-                  row_list[iBefore]["Zone"] + " S,direction," + str(int(row_list[i]["Distance"]) * distMiil) + 
+                  row_list[iBefore]["Zone"] + " S,direction," + str(float(row_list[i]["Distance"]) * distMiil) +
                   " " + str(int(westMiddle-(span/2))) + " " + str(int(westMiddle+(span/2)))+"\n")
             fileOut.write("utm," + row_list[iAfter]["Xord"] + " " + row_list[iAfter]["Yord"] + " " +
-                  row_list[iAfter]["Zone"] + " S,direction," + str(int(row_list[iAfter]["Distance"]) * distMiil) +
+                  row_list[iAfter]["Zone"] + " S,direction," + str(float(row_list[iAfter]["Distance"]) * distMiil) +
                   " " + str(int(eastMiddle-(span/2))) + " " + str(int(eastMiddle+(span/2)))+"\n")
             fileOutPoint.write(row_list[i]["Xord"] + "," + row_list[i]["Yord"] + ",33,S," + row_list[i]["Place"])
             i= i+1
@@ -67,8 +67,8 @@ east1= "310"
 east2= "410"
 eastMiddle= 360
 
-span= 225
-distMiil= 6
+span= 270
+distMiil= 13
 
 root= "/Users/oeide/Documents/GitHub/space-exploration/"
 

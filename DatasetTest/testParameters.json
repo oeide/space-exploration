@@ -1,0 +1,15 @@
+{
+    "parameters":
+    {
+        directionParam:
+        {
+            westMiddle= 180
+            eastMiddle= 360
+        }
+        parameterSet:
+        {
+            span= 270
+            distMiil= 11.2
+        }
+    }
+}
